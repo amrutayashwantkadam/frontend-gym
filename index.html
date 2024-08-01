@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROYAL GYM</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    .navbar-brand {
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .jumbotron {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      color: rgb(39, 219, 19);
+      text-shadow: 1px 1px 2px black;
+      background: url('https://tse1.mm.bing.net/th?id=OIP.5ZnQ2yc13QbW1ZWN974LzAHaEK&pid=Api&P=0&h=180') no-repeat center center;
+      background-size: cover;
+    }
+    .jumbotron::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .jumbotron .container {
+      position: relative;
+      z-index: 3;
+      animation: fadeInUp 10s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+    .contact-logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .facility-card {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+    .facility:hover .facility-card {
+      display: block;
+    }
+    .facility-card-video {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .facility:hover .facility-card-video {
+      display: none;
+    }
+    .facility-card-video iframe {
+      width: 80%;
+      height: 80%;
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hide dropdown on hover out */
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.zvcBOv4_GSEJAkCnwwZ2ZQHaHa&pid=Api&P=0&h=180" alt="Royal Gym Logo">
+        Royal Gym
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#facility">Facility</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Programs
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Corporate Memberships</a>
+              <a class="dropdown-item" href="#">Personal Training Program</a>
+              <a class="dropdown-item" href="#">Group Program</a>
+              <a class="dropdown-item" href="#">Corporate Wellness Program</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              franchise
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">own a royal gym franchise</a>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4">Welcome to Royal Gym!</h1>
+        <a class="btn btn-primary btn-lg mb-2" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="facility" class="container mt-5">
+    <h2>ROYAL GYM</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.6CfDWuHVJJsVQ7alzyJwpgHaHa&pid=Api&P=0&h=180" alt="Royal Gym Logo" class="img-fluid">
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="container">
+    <div class="text-center mb-4 display-3 fw-bold text-warning"><h2>Our Facilities</h2></div>
+    <div class="row text-center">
+      <div class="col-md-4 col-lg-3 facility border position-relative">
+        <img src="https://img.freepik.com/free-photo/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing_155003-27879.jpg?size=626&ext=jpg&ga=GA1.1.409243235.1722160772&semt=sph" width="300px" height="300px" alt="Gym">
+        <div class="facility-title">GYM</div>
+        <div class="facility-card">
+          <h5>GYM</h5>
+          <p>A gym, short for gymnasium, is an indoor venue for exercise and sports. The word is derived from the ancient Greek term "gymnasion". They are commonly found in athletic and fitness centres, and as activity and learning spaces in educational institutions. "Gym" is also the commonly used name for a "fitness centre" or health club, which is often an area for indoor recreation.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3 facility border position-relative">
+        <img src="https://img.freepik.com/premium-photo/contemporary-spotless-fitness-gym-center-interiorgenerative-ai_391052-10889.jpg?size=626&ext=jpg&ga=GA1.1.409243235.1722160772&semt=sph" width="300px" height="300px" alt="Cardio">
+        <div class="facility-title">CARDIO</div>
+        <div class="facility-card">
+          <h5>CARDIO</h5>
+          <p>Cardio exercises are aerobic activities that increase your heart rate and help improve cardiovascular health. Examples include running, cycling, swimming, and using cardio machines like treadmills and ellipticals.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3 facility border position-relative">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.9kOMllJ5FqWu03H2ltgQkAHaE7&pid=Api&rs=1&c=1&qlt=95&w=152&h=101" width="300px" height="300px" alt="Aerobics">
+        <div class="facility-title">AEROBICS</div>
+        <div class="facility-card">
+          <h5>AEROBICS</h5>
+          <p>Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines with the goal of improving all elements of fitness.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3 facility border position-relative">
+        <img src="https://wallpaperaccess.com/full/2057277.jpg" width="300px" height="300px" alt="Zumba">
+        <div class="facility-title">ZUMBA</div>
+        <div class="facility-card">
+          <h5>ZUMBA</h5>
+          <p>Zumba is an exercise fitness program created by Colombian dancer and choreographer Alberto "Beto" Pérez during the 1990s. Zumba involves dance and aerobic movements performed to energetic music.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container mt-5">
+    <h2>Gallery</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.CPz8poKGnBKmuJ_72_e82QHaE8&pid=Api&P=0&h=180" class="card-img-top"width="300px" height="300px" alt="Image 1">
+          <div class="card-body">
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.B3PWbhwpLObOAXS1nV2o_QHaEK&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 2">
+          <div class="card-body">  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.-Rk9hn0Njo5614pbAPVoIQHaEO&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 3">
+          <div class="card-body">
+       </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.-oOsU3ow-TFeRI822cVnFgHaEK&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 4">
+        <div class="card-body">  
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.sTDnuJQFRWMtVk0PYprFYgHaEK&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 5">
+        <div class="card-body">
+     </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.6t5KbboXRHbTH_CFxKMQQAHaDF&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 5">
+      <div class="card-body">
+   </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.31TfKr9OOoTT80UinO1rMgHaE8&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 6">
+    <div class="card-body">
+ </div>
+</div>
+</div>
+
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.ZDouBEz2gMKAJYp3-jKXogHaEK&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 6">
+    <div class="card-body">
+ </div>
+</div>
+</div>
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.gwLMBrQML8zfkIvoVmRrewHaFV&pid=Api&P=0&h=180" class="card-img-top" width="300px" height="300px" alt="Image 6">
+    <div class="card-body">
+ </div>
+</div>
+</div>
+  </section>
+
+  <!-- contactus Section -->
+  <section id="contact-us" class="bg-dark text-light py-5">
+    <div class="container">
+      <h2 class="text-center">Contact Us</h2>
+      <p class="text-center mb-5">Feel free to reach out to us for any inquiries or assistance!</p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h5>Our Address</h5>
+          <p>Royal Gym, 1234 Fitness St., Workout City, Country 56789</p>
+          <h5>Email</h5>
+          <p><a href="mailto:info@royalgym.com" class="text-light">info@royalgym.com</a></p>
+          <h5>Phone</h5>
+          <p><a href="tel:+1234567890" class="text-light">+1234567890</a></p>
+          
+          <!-- Embedded Google Map -->
+          <h5>Find Us</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.690144676325!2d74.48246557485645!3d17.06360722439498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc03d716ac0a2ed%3A0x3c9c2d4bb5aeb71a!2sPalus%2C%20Maharashtra%20416004%2C%20India!5e0!3m2!1sen!2sus!4v1627670408729!5m2!1sen!2sus" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-md-6">
+          <h5>Drop Us a Message</h5>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Royal Gym</h5>
+          <p>&copy; 2023 Royal Gym. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-white">Home</a></li>
+            <li><a href="#facility" class="text-white">Facility</a></li>
+            <li><a href="#gallery" class="text-white">Gallery</a></li>
+            <li><a href="#contact-us" class="text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-white"><img src="https://tse2.mm.bing.net/th?id=OIP.qMgW5mhR1UuWEO5E0T6BxgHaHa&pid=Api&P=0&h=180" alt="Facebook" width="30" height="30"></a>
+          <a href="#" class="text-white"><img src="https://tse2.mm.bing.net/th?id=OIP.qMgW5mhR1UuWEO5E0T6BxgHaHa&pid=Api&P=0&h=180" alt="Twitter" width="30" height="30"></a>
+          <a href="#" class="text-white"><img src="https://tse2.mm.bing.net/th?id=OIP.qMgW5mhR1UuWEO5E0T6BxgHaHa&pid=Api&P=0&h=180" alt="Instagram" width="30" height="30"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+            <!-- Embedded Google Map -->
+
+ <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+ <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
